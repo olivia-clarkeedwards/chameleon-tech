@@ -1,10 +1,11 @@
 import { ChangeEvent, FormEvent, useState } from 'react'
 
 interface Props {
-  updateList: (item: string) => void
+  updateList: (item: string, shop: string) => void
+  shop: string
 }
 
-function AddItem({ updateList }: Props) {
+function AddItem({ updateList, shop }: Props) {
   const [currentInput, setCurrentInput] = useState('')
 
   const handleTextInput = (evt: ChangeEvent<HTMLInputElement>) => {
@@ -13,7 +14,7 @@ function AddItem({ updateList }: Props) {
 
   const addItemToShoppingList = (evt: FormEvent<HTMLFormElement>) => {
     evt.preventDefault()
-    updateList(currentInput)
+    updateList(currentInput, shop)
     setCurrentInput('')
   }
 
