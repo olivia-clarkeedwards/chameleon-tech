@@ -1,3 +1,4 @@
+import './app.css'
 import { useState } from 'react'
 import DisplayList from './DisplayList'
 import AddItem from './AddItem'
