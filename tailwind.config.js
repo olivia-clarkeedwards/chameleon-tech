@@ -2,7 +2,10 @@
 module.exports = {
   content: ['./client/components/*.tsx', './public/index.html'],
   theme: {
-    extend: {},
+    colors: {
+      white: '#FFFFFF',
+      grey: '#D9D9D9',
+    },
   },
   plugins: [],
 }

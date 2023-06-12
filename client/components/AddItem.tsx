@@ -20,15 +20,21 @@ function AddItem({ updateList, shop }: Props) {
 
   return (
     <>
-      <form onSubmit={addItemToShoppingList}>
+      <form onSubmit={addItemToShoppingList} className="m-[18px]">
         <input
           title="list-item"
           type="text"
           name="item"
           value={currentInput}
           onChange={handleTextInput}
+          className="h-[37px] w-[213px] rounded-lg"
         />
-        <button type="submit">GO</button>
+        <button
+          type="submit"
+          className="ml-[10px] bg-white h-[37px] w-[37px] rounded-lg"
+        >
+          GO
+        </button>
       </form>
     </>
   )

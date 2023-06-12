@@ -6,7 +6,9 @@ function DisplayList({ list }: Props) {
   return (
     <ul>
       {list.map((elem, index) => (
-        <li key={index}>{elem}</li>
+        <li className="list-item" key={index}>
+          {elem}
+        </li>
       ))}
     </ul>
   )
