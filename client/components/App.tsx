@@ -5,14 +5,14 @@ import AddItem from './AddItem'
 function App() {
   const [shoppingList, setShoppingList] = useState([] as string[])
 
-  const updateShoppingList = (item) => {
+  const updateShoppingList = (item: string) => {
     setShoppingList([...shoppingList, item])
   }
 
   return (
     <div>
-      <DisplayList />
-      <AddItem />
+      <DisplayList list={shoppingList} />
+      <AddItem updateList={updateShoppingList} />
     </div>
   )
 }
