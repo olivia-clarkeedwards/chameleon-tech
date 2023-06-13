@@ -1,6 +1,7 @@
 import './app.css'
 import { useState } from 'react'
 import SupermarketList from './SupermarketList'
+import Supermarkets from '../models/Supermarkets'
 
 function App() {
   const shops = ['shop1', 'shop2', 'shop3']
@@ -9,7 +10,7 @@ function App() {
     shop1: [] as string[],
     shop2: [] as string[],
     shop3: [] as string[],
-  })
+  } as Supermarkets)
 
   const updateShoppingList = (item: string, shop: string) => {
     const newLists = { ...supermarketLists }
