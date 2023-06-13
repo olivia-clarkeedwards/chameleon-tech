@@ -1,5 +1,7 @@
 import './app.css'
 import { useState } from 'react'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 import SupermarketList from './SupermarketList'
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
   }
 
   return (
-    <>
+    <DndProvider backend={HTML5Backend}>
       <div className="h-[80px] p-[18px] p-5 w-full bg-grey absolute"></div>
       <div className="pt-40 flex flex-row flex-wrap justify-center w-full content-start">
         {shops.map((elem, index) => (
@@ -30,7 +32,7 @@ function App() {
           />
         ))}
       </div>
-    </>
+    </DndProvider>
   )
 }
 
