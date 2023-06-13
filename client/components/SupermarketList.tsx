@@ -9,7 +9,7 @@ interface Props {
 
 function SupermarketList({ currentList, updateList, shop }: Props) {
   return (
-    <div>
+    <div className="text-center">
       <h1>LIST {shop.substring(shop.length - 1, shop.length)}</h1>
       <div className="h-[418px] w-[300px] m-3 bg-grey rounded-lg relative">
         <DisplayList list={currentList} />
