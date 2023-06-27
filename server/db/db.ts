@@ -33,3 +33,7 @@ export function addItem(item: ItemInfo, db = connection): Promise<Item> {
     .returning(['*'])
     .then((data) => data[0])
 }
+
+export function delItem(id: number, db = connection): Promise<number> {
+  return db('items').where({ id }).del()
+}
