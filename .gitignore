@@ -2,3 +2,7 @@ node_modules
 static
 npm-debug.log
 bundle.*
+*.sqlite3
+/db/*.sqlite3
+server/db/*.sqlite3
+server/db/dev.sqlite3
