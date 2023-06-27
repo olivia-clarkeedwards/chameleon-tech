@@ -1,6 +1,7 @@
 import { join } from 'node:path'
 import express from 'express'
 import lists from './routes/lists'
+import items from './routes/items'
 
 /*
  * create the server
@@ -20,6 +21,7 @@ server.use(express.static(join(__dirname, 'public')))
  *************************/
 
 server.use('/api/v1/lists', lists)
+server.use('/api/v1/items', items)
 
 /*
  * re-route to client-side
