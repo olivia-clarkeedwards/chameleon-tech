@@ -13,4 +13,14 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+  db.addItem(req.body)
+    .then((itemData) => {
+      res.json(itemData)
+    })
+    .catch((err) => {
+      res.status(500).send(err.message)
+    })
+})
+
 export default router
