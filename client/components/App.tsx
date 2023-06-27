@@ -4,12 +4,13 @@ import SupermarketList from './SupermarketList'
 import Supermarkets from '../models/Supermarkets'
 
 function App() {
-  const shops = ['shop1', 'shop2', 'shop3']
+  const shops = ['shop1', 'shop2', 'shop3', 'shop4']
 
   const [supermarketLists, setSupermarketLists] = useState({
     shop1: [] as string[],
     shop2: [] as string[],
     shop3: [] as string[],
+    shop4: [] as string[],
   } as Supermarkets)
 
   const updateShoppingList = (item: string, shop: string) => {
