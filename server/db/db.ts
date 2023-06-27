@@ -11,6 +11,5 @@ export interface Item {
 }
 
 export function getAllLists(db = connection): Promise<List[]> {
-  // NOT THIS
-  return db('list').select('*')
+  return db('lists').select('*')
 }
