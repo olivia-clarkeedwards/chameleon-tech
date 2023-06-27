@@ -1,19 +1,6 @@
 import connection from './connection'
-export interface List {
-  id: number
-  list: string
-}
-
-export interface Item {
-  id: number
-  item: string
-  listId: number
-}
-
-export interface ItemInfo {
-  item: string
-  listId: number
-}
+import { Item, ItemInfo } from '../../client/models/Lists'
+import { List } from '../../client/models/Items'
 
 // Lists
 
