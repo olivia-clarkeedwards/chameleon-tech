@@ -24,3 +24,5 @@ export function addItem(item: ItemInfo, db = connection): Promise<Item> {
 export function delItem(id: number, db = connection): Promise<number> {
   return db('items').where({ id }).del()
 }
+
+// getItemsByList_id

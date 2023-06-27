@@ -33,4 +33,8 @@ router.delete('/:id', (req, res) => {
     })
 })
 
+// Call dbUtils func
+// Call getItemsByList_id
+// Return both
+
 export default router
