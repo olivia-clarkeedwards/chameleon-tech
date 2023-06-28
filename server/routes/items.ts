@@ -13,6 +13,18 @@ router.get('/', (req, res) => {
     })
 })
 
+router.get('/list/:id', (req, res) => {
+  const id = +req.params.id
+
+  db.getItemsByListId(id)
+    .then((itemsData) => {
+      res.json(itemsData)
+    })
+    .catch((err) => {
+      res.status(500).send(err.message)
+    })
+})
+
 router.post('/', (req, res) => {
   db.addItem(req.body)
     .then((itemData) => {

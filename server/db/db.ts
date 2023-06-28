@@ -14,6 +14,10 @@ export function getAllItems(db = connection): Promise<Item[]> {
   return db('items').select('*')
 }
 
+export function getItemsByListId(id: number, db = connection) {
+  return db('items').select('*').where('items.list_id', id)
+}
+
 export function addItem(item: ItemInfo, db = connection): Promise<Item> {
   return db('items')
     .insert(item)
@@ -24,5 +28,3 @@ export function addItem(item: ItemInfo, db = connection): Promise<Item> {
 export function delItem(id: number, db = connection): Promise<number> {
   return db('items').where({ id }).del()
 }
-
-// getItemsByList_id
