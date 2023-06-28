@@ -36,6 +36,16 @@ router.post('/', (req, res) => {
     })
 })
 
+router.patch('/', (req, res) => {
+  db.updateItemsListId(req.body)
+    .then((itemData) => {
+      res.json(itemData)
+    })
+    .catch((err) => {
+      res.status(500).send(err.message)
+    })
+})
+
 router.delete('/:id', (req, res) => {
   db.delItem(+req.params.id)
     .then(() => {

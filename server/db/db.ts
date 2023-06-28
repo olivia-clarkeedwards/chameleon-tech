@@ -29,6 +29,10 @@ export function addItem(item: ItemInfo, db = connection): Promise<Item> {
     .then((data) => data[0])
 }
 
+export function updateItemsListId(item: Item, db = connection): Promise<Item> {
+  return db('items').where('items.id', item.id).update('list_id', item.list_id)
+}
+
 export function delItem(id: number, db = connection): Promise<number> {
   return db('items').where({ id }).del()
 }
