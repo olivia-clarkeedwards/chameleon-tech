@@ -1,5 +1,6 @@
 import express from 'express'
 import * as db from '../db/db'
+import { getListWithItems } from '../db/utils'
 
 const router = express.Router()
 
@@ -16,7 +17,7 @@ router.get('/', (req, res) => {
 router.get('/list/:id', (req, res) => {
   const id = +req.params.id
 
-  db.getItemsByListId(id)
+  getListWithItems(id)
     .then((itemsData) => {
       res.json(itemsData)
     })
@@ -44,9 +45,5 @@ router.delete('/:id', (req, res) => {
       res.status(500).send(err.message)
     })
 })
-
-// Call dbUtils func
-// Call getItemsByList_id
-// Return both
 
 export default router
