@@ -4,5 +4,5 @@ export interface Item extends ItemInfo {
 
 export interface ItemInfo {
   item: string
-  listId: number
+  list_id: number
 }
