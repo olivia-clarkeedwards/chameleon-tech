@@ -1,6 +1,6 @@
 import connection from './connection'
-import { Item, ItemInfo } from '../../client/models/Lists'
-import { List } from '../../client/models/Items'
+import { Item, ItemInfo } from '../../client/models/Items'
+import { List } from '../../client/models/Itemss'
 
 // Lists
 

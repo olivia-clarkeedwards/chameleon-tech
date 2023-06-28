@@ -1,8 +1,10 @@
-export interface Item extends ItemInfo {
+import { Item } from './Items'
+
+export interface List {
   id: number
+  list: string
 }
 
-export interface ItemInfo {
-  item: string
-  listId: number
+export interface ListWithItems extends List {
+  items: Item[]
 }

@@ -1,4 +1,8 @@
-export interface List {
+export interface Item extends ItemInfo {
   id: number
-  list: string
+}
+
+export interface ItemInfo {
+  item: string
+  listId: number
 }

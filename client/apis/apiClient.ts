@@ -1,5 +1,5 @@
 import request from 'superagent'
-import { ItemInfo } from '../models/Lists'
+import { ItemInfo } from '../models/Items'
 
 // Routes
 
